@@ -78,6 +78,10 @@ class VichGeographicalExtension extends Extension
         $container->setParameter('vich_geographical.info_window.template_name', $config['templating']['info_window']);
 
         $rendererOptions = array();
+        if (null !== $config['google']['api_key']) {
+            $rendererOptions['google_api_key'] = $config['google']['api_key'];
+        }
+
         if (null !== $config['leaflet']['api_key']) {
             $rendererOptions['leaflet_api_key'] = $config['leaflet']['api_key'];
         }
