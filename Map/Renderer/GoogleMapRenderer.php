@@ -46,7 +46,7 @@ class GoogleMapRenderer extends AbstractMapRenderer
     public function renderJavascripts()
     {
         $scripts = array(
-            '<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key="'.$this->getOption('google_api_key').'></script>'
+            '<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&key='.$this->getOption('google_api_key').'"></script>'
         );
         
         return implode('', $scripts);
