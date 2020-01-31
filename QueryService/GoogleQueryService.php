@@ -22,7 +22,7 @@ class GoogleQueryService implements QueryServiceInterface
         $result = new QueryResult();
         
         $formattedAddr = urlencode(str_replace( ' ', '+', $query ));
-        $xml = simplexml_load_file('http://maps.google.com/maps/api/geocode/xml?address=' .
+        $xml = simplexml_load_file('https://maps.google.com/maps/api/geocode/xml?address=' .
             $formattedAddr . '&sensor=false');
 
         if ((string)$xml->status === 'OK') {
